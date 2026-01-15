@@ -248,7 +248,7 @@ export default function Home() {
           <p className="text-xl mb-8 opacity-95">
             Get your instant quote in 60 seconds. No obligation, transparent pricing.
           </p>
-          <CTAButton href="/book" variant="secondary" className="bg-white text-primary-700 hover:bg-charcoal-50">
+          <CTAButton href="/book" variant="secondary" className="hover:bg-charcoal-800">
             Get Your Instant Quote Now
           </CTAButton>
         </div>

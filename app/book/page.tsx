@@ -5,7 +5,16 @@ import CTAButton from '@/components/CTAButton'
 import { FiCheckCircle } from 'react-icons/fi'
 
 export default function Book() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    propertyType: string
+    numberOfWindows: string
+    serviceType: string[]
+    location: string
+    name: string
+    email: string
+    phone: string
+    message: string
+  }>({
     propertyType: '',
     numberOfWindows: '',
     serviceType: [],
@@ -27,8 +36,8 @@ export default function Book() {
     setFormData(prev => ({
       ...prev,
       serviceType: checked
-        ? [...(prev.serviceType as string[]), name]
-        : (prev.serviceType as string[]).filter(item => item !== name)
+        ? [...prev.serviceType, name]
+        : prev.serviceType.filter(item => item !== name)
     }))
   }
 

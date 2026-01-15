@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { FiDroplet, FiHome, FiSun, FiBriefcase, FiLayers, FiDoor } from 'react-icons/fi'
+import { FiDroplet, FiHome, FiSun, FiBriefcase, FiLayers, FiSquare } from 'react-icons/fi'
 import ServiceCard from '@/components/ServiceCard'
 import CTAButton from '@/components/CTAButton'
 
@@ -90,7 +90,7 @@ export default function Services() {
               ]}
             />
             <ServiceCard
-              icon={<FiDoor className="w-7 h-7" />}
+              icon={<FiSquare className="w-7 h-7" />}
               title="Glass Door Cleaning"
               description="Specialized cleaning for glass doors, sliding doors, and French doors. Includes frame, track, and hardware cleaning."
               features={[

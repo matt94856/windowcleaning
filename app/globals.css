@@ -7,10 +7,6 @@
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-white text-charcoal-950 antialiased;
     font-family: var(--font-inter);

@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 interface CTAButtonProps {
   href: string
-  children: React.ReactNode
+  children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline'
   className?: string
 }

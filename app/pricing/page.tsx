@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import CTAButton from '@/components/CTAButton'
 import { FiCheck } from 'react-icons/fi'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Transparent Window Cleaning Pricing | Boca Raton',
   description: 'Fair, transparent pricing for premium window cleaning services in Boca Raton. Get your instant quote in 60 seconds.',
 }

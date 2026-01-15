@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import TestimonialCard from '@/components/TestimonialCard'
 import CTAButton from '@/components/CTAButton'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Customer Reviews | Window Cleaning Testimonials | Boca Raton',
   description: 'Read what our customers say about CrystalClear Window Cleaning. Real reviews from satisfied homeowners in Boca Raton and South Florida.',
 }

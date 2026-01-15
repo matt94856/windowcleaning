@@ -1,8 +1,9 @@
-import { FiDroplet, FiHome, FiSun, FiBuilding, FiLayers, FiDoor } from 'react-icons/fi'
+import type { Metadata } from 'next'
+import { FiDroplet, FiHome, FiSun, FiBriefcase, FiLayers, FiDoor } from 'react-icons/fi'
 import ServiceCard from '@/components/ServiceCard'
 import CTAButton from '@/components/CTAButton'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Window Cleaning Services | Premium Quality | Boca Raton',
   description: 'Comprehensive window cleaning services including exterior, interior, screen cleaning, and commercial services in Boca Raton and South Florida.',
 }
@@ -77,7 +78,7 @@ export default function Services() {
               ]}
             />
             <ServiceCard
-              icon={<FiBuilding className="w-7 h-7" />}
+              icon={<FiBriefcase className="w-7 h-7" />}
               title="Commercial Window Cleaning"
               description="Professional commercial window cleaning services for offices, retail stores, and commercial buildings. Flexible scheduling and bulk pricing available."
               features={[

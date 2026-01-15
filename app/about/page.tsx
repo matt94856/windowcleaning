@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import CTAButton from '@/components/CTAButton'
 import { FiAward, FiUsers, FiMapPin, FiTarget } from 'react-icons/fi'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'About Us | FAU Student-Owned Window Cleaning | Boca Raton',
   description: 'Learn about CrystalClear Window Cleaning, a premium window cleaning service owned and operated by FAU students in Boca Raton, South Florida.',
 }

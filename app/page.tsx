@@ -1,5 +1,5 @@
 import { FiShield, FiAward, FiUsers, FiCheckCircle } from 'react-icons/fi'
-import { FiDroplet, FiHome, FiBuilding, FiSun } from 'react-icons/fi'
+import { FiDroplet, FiHome, FiBriefcase, FiSun } from 'react-icons/fi'
 import CTAButton from '@/components/CTAButton'
 import TrustBadge from '@/components/TrustBadge'
 import ServiceCard from '@/components/ServiceCard'
@@ -98,7 +98,7 @@ export default function Home() {
               features={['Removal & cleaning', 'Frame maintenance', 'Reinstallation']}
             />
             <ServiceCard
-              icon={<FiBuilding className="w-7 h-7" />}
+              icon={<FiBriefcase className="w-7 h-7" />}
               title="Commercial"
               description="Professional commercial window cleaning for businesses"
               features={['Regular schedules', 'Bulk pricing', 'Flexible timing']}

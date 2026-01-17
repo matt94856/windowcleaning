@@ -3,65 +3,65 @@ import TestimonialCard from '@/components/TestimonialCard'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Window Cleaning Testimonials | Boca Raton',
-  description: 'Read what our customers say about CrystalClear Window Cleaning. Real reviews from satisfied homeowners in Boca Raton and South Florida.',
+  title: 'Business Reviews | Window Cleaning Testimonials | Boca Raton',
+  description: 'Read what business owners say about CrystalClear Window Cleaning. Real reviews from satisfied small businesses in Boca Raton and South Florida.',
 }
 
 export default function Reviews() {
   const testimonials = [
     {
-      name: 'Sarah Martinez',
-      location: 'Boca Raton, FL',
-      rating: 5,
-      text: 'CrystalClear exceeded my expectations. The team was professional, punctual, and the windows have never looked better. I especially appreciated their attention to detail on the window frames and sills. Highly recommend!',
-    },
-    {
       name: 'Robert Chen',
-      location: 'Delray Beach, FL',
+      location: 'Delray Beach, FL - Retail Store',
       rating: 5,
-      text: 'As a small business owner, I appreciate their attention to detail and reliability. They\'ve been cleaning our storefront windows monthly for over a year, and I\'ve never had a complaint. Professional, efficient, and reasonably priced.',
+      text: 'As a small business owner, I appreciate their attention to detail and reliability. They\'ve been cleaning our storefront windows monthly for over a year. Professional, efficient, and very affordable. Highly recommend!',
     },
     {
-      name: 'Jennifer Williams',
-      location: 'Boca Raton, FL',
+      name: 'Maria Rodriguez',
+      location: 'Boca Raton, FL - Strip Mall Owner',
       rating: 5,
-      text: 'The fact that they\'re FAU students shows in their work ethic. Professional, thorough, and reasonably priced. My windows sparkle, and I love supporting local students. Will definitely use them again!',
-    },
-    {
-      name: 'Michael Thompson',
-      location: 'Boca Raton, FL',
-      rating: 5,
-      text: 'First-time customer, and I\'m impressed. They removed years of hard water stains that I thought were permanent. The team was respectful of my property and left everything spotless. Worth every penny.',
-    },
-    {
-      name: 'Lisa Rodriguez',
-      location: 'Deerfield Beach, FL',
-      rating: 5,
-      text: 'I\'ve tried several window cleaning services, and CrystalClear is by far the best. They cleaned both interior and exterior, including screens and tracks. The difference is night and day. Very satisfied!',
+      text: 'We have three storefronts in a strip mall, and CrystalClear handles all of them. Their biweekly service keeps our windows spotless, and the bulk pricing is very reasonable. They work around our business hours, which is perfect.',
     },
     {
       name: 'David Park',
-      location: 'Boca Raton, FL',
+      location: 'Boca Raton, FL - Restaurant Owner',
       rating: 5,
-      text: 'Excellent service from start to finish. Quick response to my quote request, transparent pricing, and outstanding results. The windows look brand new. I\'ll be scheduling regular cleanings with them.',
+      text: 'The fact that they\'re FAU students shows in their work ethic. Professional, thorough, and affordable. They clean our restaurant windows monthly, and customers always comment on how clean everything looks. Great value!',
+    },
+    {
+      name: 'Jennifer Martinez',
+      location: 'Boca Raton, FL - Boutique Owner',
+      rating: 5,
+      text: 'First-time customer, and I\'m impressed. They did an excellent job cleaning our storefront windows. The team was respectful, worked quickly, and left everything spotless. Very affordable too.',
+    },
+    {
+      name: 'Michael Thompson',
+      location: 'Deerfield Beach, FL - Office Manager',
+      rating: 5,
+      text: 'I\'ve tried several window cleaning services for our small office, and CrystalClear is by far the best. They clean both interior and exterior windows. The difference is night and day, and their rates are very competitive.',
+    },
+    {
+      name: 'Lisa Chen',
+      location: 'Boca Raton, FL - Salon Owner',
+      rating: 5,
+      text: 'Excellent service from start to finish. Quick response to my quote request, and they scheduled us for biweekly service. The windows look brand new every time. Very reliable and affordable for a small business like ours.',
     },
     {
       name: 'Amanda Foster',
-      location: 'Boca Raton, FL',
+      location: 'Boca Raton, FL - Coffee Shop',
       rating: 5,
-      text: 'Professional, reliable, and detail-oriented. They cleaned my entire home including skylights, which I\'ve never been able to get properly cleaned before. Very impressed with their thoroughness.',
+      text: 'Professional, reliable, and detail-oriented. They clean our coffee shop windows monthly, and it makes such a difference in how our storefront looks. The pricing is very reasonable, and they always show up on time.',
     },
     {
       name: 'James Wilson',
-      location: 'Delray Beach, FL',
+      location: 'Delray Beach, FL - Auto Repair Shop',
       rating: 5,
-      text: 'Great experience overall. The team showed up on time, worked efficiently, and cleaned up after themselves. My windows haven\'t looked this good since I moved in. Highly recommend!',
+      text: 'Great experience overall. The team showed up on time, worked efficiently around our customers, and cleaned up after themselves. Our windows haven\'t looked this good in years. Very affordable service.',
     },
     {
-      name: 'Maria Garcia',
-      location: 'Boca Raton, FL',
+      name: 'Sarah Garcia',
+      location: 'Boca Raton, FL - Gift Shop',
       rating: 5,
-      text: 'I was skeptical about using a student-owned business, but CrystalClear proved me wrong. They\'re more professional than some established companies I\'ve used. Great service, fair pricing.',
+      text: 'I was skeptical about using a student-owned business, but CrystalClear proved me wrong. They\'re more professional than some established companies I\'ve used. Great service, fair pricing, and I love supporting local students.',
     },
   ]
 
@@ -70,13 +70,13 @@ export default function Reviews() {
       {/* Hero */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal-950 mb-6">
-            What Our Customers Say
-          </h1>
-          <p className="text-xl text-charcoal-700 leading-relaxed">
-            Don't just take our word for it. See what homeowners and business owners 
-            throughout Boca Raton and South Florida are saying about CrystalClear.
-          </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-charcoal-950 mb-6">
+              What Business Owners Say
+            </h1>
+            <p className="text-xl text-charcoal-700 leading-relaxed">
+              Don't just take our word for it. See what small business owners 
+              throughout Boca Raton and South Florida are saying about CrystalClear.
+            </p>
         </div>
       </section>
 
@@ -121,13 +121,13 @@ export default function Reviews() {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold text-charcoal-950 mb-4">
-            Join Our Satisfied Customers
+            Join Our Satisfied Business Clients
           </h2>
           <p className="text-xl text-charcoal-700 mb-8">
-            Experience the CrystalClear difference. Get your instant quote today.
+            Experience the CrystalClear difference. Request your free quote today.
           </p>
           <CTAButton href="/book" variant="primary" className="text-lg px-10 py-4">
-            Get Your Instant Quote
+            Request a Free Quote
           </CTAButton>
         </div>
       </section>

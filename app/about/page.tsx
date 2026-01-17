@@ -3,8 +3,8 @@ import CTAButton from '@/components/CTAButton'
 import { FiAward, FiUsers, FiMapPin, FiTarget } from 'react-icons/fi'
 
 export const metadata: Metadata = {
-  title: 'About Us | FAU Student-Owned Window Cleaning | Boca Raton',
-  description: 'Learn about CrystalClear Window Cleaning, a premium window cleaning service owned and operated by FAU students in Boca Raton, South Florida.',
+  title: 'About Us | FAU Student-Owned Commercial Window Cleaning | Boca Raton',
+  description: 'Learn about CrystalClear Window Cleaning, an affordable commercial window cleaning service for small businesses, owned and operated by FAU students in Boca Raton, South Florida.',
 }
 
 export default function About() {
@@ -23,7 +23,7 @@ export default function About() {
           </h1>
           <p className="text-xl text-charcoal-700 leading-relaxed">
             We're not a franchise. We're local FAU students building something exceptional, 
-            one window at a time.
+            providing affordable window cleaning services for small businesses in our community.
           </p>
         </div>
       </section>

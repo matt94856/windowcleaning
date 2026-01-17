@@ -107,8 +107,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal-950 mb-1">Phone</h3>
-                    <a href="tel:+15612345678" className="text-charcoal-700 hover:text-primary-700 transition-colors">
-                      (561) 234-5678
+                    <a href="tel:+19043157978" className="text-charcoal-700 hover:text-primary-700 transition-colors">
+                      (904) 315-7978
                     </a>
                     <p className="text-sm text-charcoal-600 mt-1">Mon-Sat: 8am-6pm</p>
                   </div>

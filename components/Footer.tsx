@@ -13,9 +13,8 @@ export default function Footer() {
               <span className="text-sm text-charcoal-400">Window Cleaning</span>
             </div>
             <p className="text-charcoal-300 text-sm leading-relaxed max-w-md">
-              Premium window cleaning services in Boca Raton and South Florida. 
-              Professionally run by FAU students, delivering exceptional results 
-              with attention to detail and local pride.
+              Affordable window cleaning for small businesses, strip malls, and storefronts in Boca Raton and South Florida. 
+              Professionally run by FAU students, delivering reliable service with attention to detail.
             </p>
             <div className="mt-6 flex items-center space-x-2">
               <span className="text-xs font-semibold text-primary-400 bg-primary-400/10 px-3 py-1 rounded-full">
@@ -62,8 +61,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FiPhone className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
-                <a href="tel:+15612345678" className="text-charcoal-300 hover:text-white text-sm transition-colors">
-                  (561) 234-5678
+                <a href="tel:+19043157978" className="text-charcoal-300 hover:text-white text-sm transition-colors">
+                  (904) 315-7978
                 </a>
               </li>
               <li className="flex items-start space-x-3">

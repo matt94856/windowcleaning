@@ -94,7 +94,7 @@ export default function Book() {
             with your personalized estimate.
           </p>
           <p className="text-charcoal-600 mb-8">
-            In the meantime, feel free to call us at <a href="tel:+15612345678" className="text-primary-700 font-semibold">(561) 234-5678</a> 
+            In the meantime, feel free to call us at <a href="tel:+19043157978" className="text-primary-700 font-semibold">(904) 315-7978</a> 
             if you have any questions.
           </p>
           <CTAButton href="/" variant="primary">
@@ -111,14 +111,14 @@ export default function Book() {
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal-950 mb-6">
-            Get Your Instant Quote
+            Request a Free Quote
           </h1>
           <p className="text-xl text-charcoal-700 leading-relaxed mb-4">
-            Answer a few quick questions and receive your personalized estimate in 60 seconds.
+            Tell us about your business and we'll provide a custom quote tailored to your needs.
           </p>
           <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
-            <span>⚡</span>
-            <span>No obligation • Transparent pricing</span>
+            <span>💼</span>
+            <span>No obligation • Affordable rates</span>
           </div>
         </div>
       </section>
@@ -140,13 +140,14 @@ export default function Book() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-charcoal-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
               >
-                <option value="">Select property type</option>
-                <option value="condo">Condo / Townhome</option>
-                <option value="single-family">Single-Family Home</option>
-                <option value="large-home">Large Home / Estate</option>
-                <option value="commercial">Commercial / Office</option>
+                <option value="">Select business type</option>
                 <option value="retail">Retail Storefront</option>
-                <option value="other">Other</option>
+                <option value="restaurant">Restaurant / Food Service</option>
+                <option value="office">Office / Professional</option>
+                <option value="strip-mall">Strip Mall / Multiple Units</option>
+                <option value="salon">Salon / Spa</option>
+                <option value="auto">Auto Repair / Service</option>
+                <option value="other">Other Business</option>
               </select>
             </div>
 
@@ -198,36 +199,6 @@ export default function Book() {
                   />
                   <span className="text-charcoal-700">Interior Window Cleaning</span>
                 </label>
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="screens"
-                    checked={(formData.serviceType as string[]).includes('screens')}
-                    onChange={handleCheckboxChange}
-                    className="w-5 h-5 text-primary-700 border-charcoal-300 rounded focus:ring-primary-500"
-                  />
-                  <span className="text-charcoal-700">Screen Cleaning</span>
-                </label>
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="tracks"
-                    checked={(formData.serviceType as string[]).includes('tracks')}
-                    onChange={handleCheckboxChange}
-                    className="w-5 h-5 text-primary-700 border-charcoal-300 rounded focus:ring-primary-500"
-                  />
-                  <span className="text-charcoal-700">Track Cleaning</span>
-                </label>
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="hard-water"
-                    checked={(formData.serviceType as string[]).includes('hard-water')}
-                    onChange={handleCheckboxChange}
-                    className="w-5 h-5 text-primary-700 border-charcoal-300 rounded focus:ring-primary-500"
-                  />
-                  <span className="text-charcoal-700">Hard Water Removal</span>
-                </label>
               </div>
             </div>
 
@@ -275,7 +246,7 @@ export default function Book() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="(561) 234-5678"
+                  placeholder="(904) 315-7978"
                   className="w-full px-4 py-3 border border-charcoal-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
                 />
               </div>
@@ -326,7 +297,7 @@ export default function Book() {
               disabled={isSubmitting}
               className="w-full rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Submitting...' : 'Get My Instant Quote'}
+              {isSubmitting ? 'Submitting...' : 'Request Free Quote'}
             </button>
 
             <p className="text-center text-sm text-charcoal-600 mt-4">

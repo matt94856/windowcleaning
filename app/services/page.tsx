@@ -4,8 +4,9 @@ import ServiceCard from '@/components/ServiceCard'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Window Cleaning Services | Premium Quality | Boca Raton',
-  description: 'Comprehensive window cleaning services including exterior, interior, screen cleaning, and commercial services in Boca Raton and South Florida.',
+  title: 'Commercial Window Cleaning Services Boca Raton | Small Businesses | Affordable',
+  description: 'Professional, affordable window cleaning for small businesses, strip malls, and storefronts in Boca Raton, FL. Biweekly and monthly service plans. Free quotes.',
+  keywords: 'commercial window cleaning boca raton, small business window cleaning, strip mall window cleaning boca raton, affordable window cleaning boca raton',
 }
 
 export default function Services() {
@@ -15,12 +16,11 @@ export default function Services() {
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal-950 mb-6">
-            Our Services
+            Commercial Window Cleaning Services
           </h1>
           <p className="text-xl text-charcoal-700 leading-relaxed">
-            Premium window cleaning services tailored to your needs. From residential 
-            homes to commercial buildings, we deliver exceptional results with 
-            attention to detail.
+            Professional window cleaning for small businesses, strip malls, and storefronts. 
+            Affordable recurring service plans to keep your windows consistently clean and your business looking its best.
           </p>
         </div>
       </section>
@@ -30,75 +30,75 @@ export default function Services() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
-              icon={<FiDroplet className="w-7 h-7" />}
-              title="Exterior Window Cleaning"
-              description="Complete exterior window washing using professional water-fed pole systems and eco-friendly cleaning solutions. Perfect for removing dirt, grime, and environmental buildup."
+              icon={<FiBriefcase className="w-7 h-7" />}
+              title="Storefront Cleaning"
+              description="Complete exterior window cleaning for retail stores and small businesses. Professional service that keeps your storefront looking its best."
               features={[
-                'Water-fed pole system for hard-to-reach windows',
-                'Eco-friendly, streak-free cleaning solutions',
+                'Streak-free, spotless finish',
                 'Frame and sill cleaning included',
-                'Removes dirt, pollen, and environmental buildup',
-                'Safe for all window types and materials'
+                'Eco-friendly cleaning solutions',
+                'Flexible scheduling around business hours',
+                'Affordable rates'
               ]}
             />
             <ServiceCard
-              icon={<FiHome className="w-7 h-7" />}
-              title="Interior Window Cleaning"
-              description="Detailed interior window cleaning that removes fingerprints, smudges, and dust. We clean frames, sills, and glass to perfection."
+              icon={<FiDroplet className="w-7 h-7" />}
+              title="Recurring Service Plans"
+              description="Biweekly or monthly service plans to keep your windows consistently clean. Discounted rates for regular customers."
               features={[
-                'Complete frame and sill cleaning',
-                'Removes fingerprints and smudges',
-                'Dust and debris removal',
-                'Spot-free, streak-free finish',
-                'Attention to detail on every pane'
+                'Biweekly or monthly options',
+                'Discounted pricing for recurring service',
+                'Consistent, reliable maintenance',
+                'Priority scheduling',
+                'No long-term contracts required'
               ]}
             />
             <ServiceCard
               icon={<FiSun className="w-7 h-7" />}
-              title="Screen Cleaning"
-              description="Thorough screen cleaning service that removes dust, pollen, and debris. We carefully remove, clean, and reinstall your screens."
+              title="Strip Mall Service"
+              description="Professional cleaning for multiple storefronts in strip malls. Coordinated service with volume pricing discounts."
               features={[
-                'Careful removal and reinstallation',
-                'Deep cleaning of screen mesh',
-                'Frame cleaning and maintenance',
-                'Restores airflow and visibility',
-                'Extends screen lifespan'
-              ]}
-            />
-            <ServiceCard
-              icon={<FiLayers className="w-7 h-7" />}
-              title="Track Cleaning"
-              description="Comprehensive window track cleaning that removes dirt, debris, and buildup. Essential for smooth window operation and cleanliness."
-              features={[
-                'Removes dirt and debris buildup',
-                'Improves window operation',
-                'Prevents future issues',
-                'Complete track system cleaning',
-                'Professional tools and techniques'
-              ]}
-            />
-            <ServiceCard
-              icon={<FiBriefcase className="w-7 h-7" />}
-              title="Commercial Window Cleaning"
-              description="Professional commercial window cleaning services for offices, retail stores, and commercial buildings. Flexible scheduling and bulk pricing available."
-              features={[
-                'Regular maintenance schedules',
-                'Bulk pricing for multiple locations',
-                'Flexible timing to minimize disruption',
-                'High-rise and ground-level service',
-                'Professional equipment and techniques'
+                'Bulk pricing for multiple units',
+                'Coordinated scheduling',
+                'Volume discounts available',
+                'Single point of contact',
+                'Flexible service frequency'
               ]}
             />
             <ServiceCard
               icon={<FiSquare className="w-7 h-7" />}
               title="Glass Door Cleaning"
-              description="Specialized cleaning for glass doors, sliding doors, and French doors. Includes frame, track, and hardware cleaning."
+              description="Specialized cleaning for glass doors and entryways. Includes frame and hardware cleaning for a complete service."
               features={[
-                'Sliding door track cleaning',
-                'French door frame cleaning',
+                'Entry door cleaning',
                 'Hardware maintenance',
                 'Complete glass surface cleaning',
-                'Enhanced curb appeal'
+                'Enhanced professional appearance',
+                'Frame cleaning included'
+              ]}
+            />
+            <ServiceCard
+              icon={<FiLayers className="w-7 h-7" />}
+              title="Interior Window Cleaning"
+              description="Detailed interior window cleaning for offices and businesses with interior-facing windows. Removes fingerprints, smudges, and dust."
+              features={[
+                'Complete frame and sill cleaning',
+                'Removes fingerprints and smudges',
+                'Dust and debris removal',
+                'Spot-free, streak-free finish',
+                'Minimal disruption to operations'
+              ]}
+            />
+            <ServiceCard
+              icon={<FiHome className="w-7 h-7" />}
+              title="One-Time Deep Clean"
+              description="Thorough one-time cleaning service for businesses that need immediate attention or occasional maintenance."
+              features={[
+                'Complete exterior cleaning',
+                'Frame and sill cleaning',
+                'Perfect for new businesses or special events',
+                'Flexible scheduling',
+                'Affordable rates'
               ]}
             />
           </div>
@@ -116,23 +116,17 @@ export default function Services() {
               Enhance your service with these specialized options
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-6 border border-charcoal-100">
-              <h3 className="text-xl font-semibold text-charcoal-950 mb-2">Hard Water Removal</h3>
+              <h3 className="text-xl font-semibold text-charcoal-950 mb-2">After-Hours Service</h3>
               <p className="text-charcoal-600 text-sm">
-                Specialized treatment to remove hard water stains and mineral deposits from windows and glass surfaces.
+                Available for businesses that prefer service outside of regular business hours to minimize disruption.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-charcoal-100">
-              <h3 className="text-xl font-semibold text-charcoal-950 mb-2">Skylight Cleaning</h3>
+              <h3 className="text-xl font-semibold text-charcoal-950 mb-2">Emergency Service</h3>
               <p className="text-charcoal-600 text-sm">
-                Professional skylight cleaning using specialized equipment to safely reach and clean overhead glass.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-charcoal-100">
-              <h3 className="text-xl font-semibold text-charcoal-950 mb-2">Gutter Cleaning</h3>
-              <p className="text-charcoal-600 text-sm">
-                Complete gutter cleaning service to complement your window cleaning and maintain your home's exterior.
+                Quick response for special events, grand openings, or urgent cleaning needs. Same-day service available.
               </p>
             </div>
           </div>

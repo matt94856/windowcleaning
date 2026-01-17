@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import CTAButton from '@/components/CTAButton'
 import { FiCheckCircle } from 'react-icons/fi'
+import { supabase } from '@/lib/supabase'
 
 export default function Book() {
   const [formData, setFormData] = useState<{
@@ -25,6 +26,8 @@ export default function Book() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -41,11 +44,39 @@ export default function Book() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In production, this would send to your backend/email service
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    setIsSubmitting(true)
+    setError(null)
+
+    try {
+      const { error: supabaseError } = await supabase
+        .from('inquiries')
+        .insert([
+          {
+            type: 'quote',
+            property_type: formData.propertyType,
+            number_of_windows: formData.numberOfWindows,
+            service_type: formData.serviceType,
+            location: formData.location,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            message: formData.message || null,
+          },
+        ])
+
+      if (supabaseError) {
+        throw supabaseError
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Error submitting form:', err)
+      setError('There was an error submitting your request. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -282,12 +313,20 @@ export default function Book() {
               />
             </div>
 
+            {/* Error Message */}
+            {error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-sm text-red-700">{error}</p>
+              </div>
+            )}
+
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors"
+              disabled={isSubmitting}
+              className="w-full rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Get My Instant Quote
+              {isSubmitting ? 'Submitting...' : 'Get My Instant Quote'}
             </button>
 
             <p className="text-center text-sm text-charcoal-600 mt-4">

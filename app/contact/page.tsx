@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi'
 import CTAButton from '@/components/CTAButton'
 import { FiCheckCircle } from 'react-icons/fi'
+import { supabase } from '@/lib/supabase'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,17 +15,45 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In production, this would send to your backend/email service
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    setIsSubmitting(true)
+    setError(null)
+
+    try {
+      const { error: supabaseError } = await supabase
+        .from('inquiries')
+        .insert([
+          {
+            type: 'contact',
+            location: 'Contact Form', // Contact form doesn't have location, using placeholder
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            subject: formData.subject || null,
+            message: formData.message,
+          },
+        ])
+
+      if (supabaseError) {
+        throw supabaseError
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Error submitting form:', err)
+      setError('There was an error sending your message. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -222,11 +251,20 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-charcoal-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors resize-none"
                   />
                 </div>
+                
+                {/* Error Message */}
+                {error && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-sm text-red-700">{error}</p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
